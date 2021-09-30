@@ -28,19 +28,19 @@ module.exports = function (config) {
       check: {
         emitWarning: false,
         global: {
-          statements: 50,
-          branches: 50,
-          functions: 50,
-          lines: 50,
+          statements: 80,
+          branches: 80,
+          functions: 0,
+          lines: 79,
           excludes: [
-            'foo/bar/**/*.js'
+             
           ]
         },
         each: {
-          statements: 50,
-          branches: 50,
-          functions: 50,
-          lines: 50,
+          statements: 80,
+          branches: 80,
+          functions: 0,
+          lines: 79,
           excludes: [
            
           ],
