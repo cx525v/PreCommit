@@ -25,12 +25,37 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
+      check: {
+        emitWarning: false,
+        global: {
+          statements: 50,
+          branches: 50,
+          functions: 50,
+          lines: 50,
+          excludes: [
+            'foo/bar/**/*.js'
+          ]
+        },
+        each: {
+          statements: 50,
+          branches: 50,
+          functions: 50,
+          lines: 50,
+          excludes: [
+           
+          ],
+          overrides: {
+            
+          }
+        }
+      },
       dir: require('path').join(__dirname, './coverage/PreCommit'),
       subdir: '.',
       reporters: [
         { type: 'html' },
         { type: 'text-summary' }
-      ]
+      ],
+      
     },
     reporters: ['progress', 'kjhtml'],
     port: 9876,
